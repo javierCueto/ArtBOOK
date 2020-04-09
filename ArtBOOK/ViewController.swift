@@ -12,11 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
+        
+        
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+   
+    
+    @objc func addButtonClicked(){
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
 
 

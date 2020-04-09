@@ -11,25 +11,24 @@ import UIKit
 class DetailsVCViewController: UIViewController {
     
     @IBOutlet weak var artImage: UIImageView!
-    
     @IBOutlet weak var nameLable: UITextField!
-    
     @IBOutlet weak var artistLabel: UITextField!
-    
-    
     @IBOutlet weak var yearLabel: UITextField!
     
-    
-    
-    @IBAction func saveButton(_ sender: Any) {
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecognizer)
     }
-    
+       
+    @objc func hideKeyboard(){
+        view.endEditing(true)
+    }
+    @IBAction func saveButton(_ sender: Any) {
+        
+    }
+   
 
 
 }

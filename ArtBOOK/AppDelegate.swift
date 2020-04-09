@@ -15,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+      // print("initial")
+        //UINavigationBar.appearance().customNavigationBar()
+    
+        
+       // UINavigationBar.appearance().standardAppearance.titleTextAttributes =  [.foregroundColor: UIColor.white]
+        
+         // UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        // color for standard title label
+        //UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
         return true
     }
 
@@ -63,7 +73,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }()
 
     // MARK: - Core Data Saving support
-
+    
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -80,3 +90,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension UINavigationBar {
+    func customNavigationBar() {
+ 
+
+        // color for background of navigation bar
+        // but if you use larget titles, then in viewDidLoad must write
+        // navigationController?.view.backgroundColor = // your color
+        self.barTintColor = .white
+        self.isTranslucent = false
+
+        // for larget titles
+        self.prefersLargeTitles = true
+
+        // color for large title label
+        self.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+        // color for standard title label
+        self.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
+
+        
+    }
+}
