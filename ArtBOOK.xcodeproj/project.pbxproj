@@ -14,6 +14,7 @@
 		CF316F18243EBE69008E1961 /* ArtBOOK.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF316F16243EBE69008E1961 /* ArtBOOK.xcdatamodeld */; };
 		CF316F1A243EBE6A008E1961 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF316F19243EBE6A008E1961 /* Assets.xcassets */; };
 		CF316F1D243EBE6A008E1961 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF316F1B243EBE6A008E1961 /* LaunchScreen.storyboard */; };
+		CF316F25243EC0EA008E1961 /* DetailsVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF316F24243EC0EA008E1961 /* DetailsVCViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		CF316F19243EBE6A008E1961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF316F1C243EBE6A008E1961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF316F1E243EBE6A008E1961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF316F24243EC0EA008E1961 /* DetailsVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVCViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				CF316F1B243EBE6A008E1961 /* LaunchScreen.storyboard */,
 				CF316F1E243EBE6A008E1961 /* Info.plist */,
 				CF316F16243EBE69008E1961 /* ArtBOOK.xcdatamodeld */,
+				CF316F24243EC0EA008E1961 /* DetailsVCViewController.swift */,
 			);
 			path = ArtBOOK;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF316F12243EBE69008E1961 /* ViewController.swift in Sources */,
+				CF316F25243EC0EA008E1961 /* DetailsVCViewController.swift in Sources */,
 				CF316F0E243EBE69008E1961 /* AppDelegate.swift in Sources */,
 				CF316F18243EBE69008E1961 /* ArtBOOK.xcdatamodeld in Sources */,
 				CF316F10243EBE69008E1961 /* SceneDelegate.swift in Sources */,
