@@ -15,9 +15,24 @@ class DetailsVCViewController: UIViewController {
     @IBOutlet weak var nameText: UITextField!
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var yearText: UITextField!
+    var chosenPainting = ""
+    var chosenPaintingId : UUID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if chosenPainting != ""{
+            //Query here
+            let stringUUID = chosenPaintingId!.uuidString
+            
+            print(stringUUID)
+        } else {
+            nameText.text = ""
+            artistText.text = ""
+            yearText.text = ""
+        }
+        
+        
+        
         
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
