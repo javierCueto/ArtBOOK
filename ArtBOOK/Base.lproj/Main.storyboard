@@ -145,9 +145,9 @@
                     <navigationItem key="navigationItem" title="Load Image" id="GzM-KC-1vD"/>
                     <connections>
                         <outlet property="artImage" destination="rVE-4Y-XlF" id="zeq-Yd-2gh"/>
-                        <outlet property="artistLabel" destination="3W5-mq-WLk" id="YYE-a2-CnE"/>
-                        <outlet property="nameLable" destination="JwL-h6-Ykw" id="l9h-iP-x9L"/>
-                        <outlet property="yearLabel" destination="pV7-Au-n6n" id="nEt-fF-21e"/>
+                        <outlet property="artistText" destination="3W5-mq-WLk" id="YYE-a2-CnE"/>
+                        <outlet property="nameText" destination="JwL-h6-Ykw" id="l9h-iP-x9L"/>
+                        <outlet property="yearText" destination="pV7-Au-n6n" id="nEt-fF-21e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSX-WQ-zsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

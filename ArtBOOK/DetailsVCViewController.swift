@@ -7,17 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class DetailsVCViewController: UIViewController {
     
     @IBOutlet weak var artImage: UIImageView!
-    @IBOutlet weak var nameLable: UITextField!
-    @IBOutlet weak var artistLabel: UITextField!
-    @IBOutlet weak var yearLabel: UITextField!
+    @IBOutlet weak var nameText: UITextField!
+    @IBOutlet weak var artistText: UITextField!
+    @IBOutlet weak var yearText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
         
@@ -25,7 +26,7 @@ class DetailsVCViewController: UIViewController {
         let imageTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(selectImage))
         artImage.addGestureRecognizer(imageTapRecognizer)
     }
-       
+    
     @objc func hideKeyboard(){
         view.endEditing(true)
     }
@@ -46,11 +47,35 @@ class DetailsVCViewController: UIViewController {
     
     
     @IBAction func saveButton(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
         
+       
+        let newPainting = NSEntityDescription.insertNewObject(forEntityName : "Paintings", into: context)
+        
+        if let year = Int(yearText.text!) {
+             newPainting.setValue(year, forKey: "year")
+        }
+        newPainting.setValue(nameText.text, forKey: "name")
+        newPainting.setValue(artistText.text, forKey: "artist")
+        newPainting.setValue(UUID(), forKey: "id")
+        
+        let data = artImage.image!.jpegData(compressionQuality: 0.5)
+        
+        newPainting.setValue(data, forKey: "image")
+        
+        
+        do {
+            try  context.save()
+            print("data saved in DB")
+        } catch {
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+        }
     }
-   
-
-
+    
+    
+    
 }
 
 extension DetailsVCViewController: UIImagePickerControllerDelegate{
