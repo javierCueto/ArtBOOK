@@ -31,6 +31,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Art Book" id="yaz-0L-Pwq"/>
                     <connections>
+                        <outlet property="tableView" destination="28Z-G8-A9N" id="3Io-BE-F8I"/>
                         <segue destination="F30-1a-Xxg" kind="show" identifier="toDetailsVC" id="YUJ-W4-Lwm"/>
                     </connections>
                 </viewController>

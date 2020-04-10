@@ -72,6 +72,14 @@ class DetailsVCViewController: UIViewController {
             let nserror = error as NSError
             fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
         }
+        
+        
+        
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
+        self.navigationController?.popViewController(animated: true)
+        
+        
+        
     }
     
     
