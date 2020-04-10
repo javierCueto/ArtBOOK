@@ -18,14 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       // print("initial")
         //UINavigationBar.appearance().customNavigationBar()
     
-        
-       // UINavigationBar.appearance().standardAppearance.titleTextAttributes =  [.foregroundColor: UIColor.white]
-        
-         // UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-
-        // color for standard title label
-        //UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        
+       
         return true
     }
 
